@@ -32,12 +32,139 @@
             </nav>            
         </div>
     </header>
-    <div class="container principal">
+    <div class="container conteudo-principal">
         <main>
-            <ul></ul>
+            <ul class="lista-produtos">
+                <li class="card-produto">
+                    <img src="../img/jaqueta.svg" alt="">
+                    <div class="conteudo-produto">
+                        <small>Camisetas</small>
+                        <h3>Lightweight Jacket</h3>
+                        <p>Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
+                        <span>R$ 100,00</span>
+                        <button id="add_1">Adicionar ao carrinho</button>
+                    </div>
+                </li>
+                <li class="card-produto">
+                    <img src="../img/jaqueta.svg" alt="">
+                    <div class="conteudo-produto">
+                        <small>Camisetas</small>
+                        <h3>Lightweight Jacket</h3>
+                        <p>Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
+                        <span>R$ 100,00</span>
+                        <button id="add_1">Adicionar ao carrinho</button>
+                    </div>
+                </li>
+                <li class="card-produto">
+                    <img src="../img/jaqueta.svg" alt="">
+                    <div class="conteudo-produto">
+                        <small>Camisetas</small>
+                        <h3>Lightweight Jacket</h3>
+                        <p>Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
+                        <span>R$ 100,00</span>
+                        <button id="add_1">Adicionar ao carrinho</button>
+                    </div>
+                </li>
+                <li class="card-produto">
+                    <img src="../img/jaqueta.svg" alt="">
+                    <div class="conteudo-produto">
+                        <small>Camisetas</small>
+                        <h3>Lightweight Jacket</h3>
+                        <p>Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
+                        <span>R$ 100,00</span>
+                        <button id="add_1">Adicionar ao carrinho</button>
+                    </div>
+                </li>
+                <li class="card-produto">
+                    <img src="../img/jaqueta.svg" alt="">
+                    <div class="conteudo-produto">
+                        <small>Camisetas</small>
+                        <h3>Lightweight Jacket</h3>
+                        <p>Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
+                        <span>R$ 100,00</span>
+                        <button id="add_1">Adicionar ao carrinho</button>
+                    </div>
+                </li>
+                <li class="card-produto">
+                    <img src="../img/jaqueta.svg" alt="">
+                    <div class="conteudo-produto">
+                        <small>Camisetas</small>
+                        <h3>Lightweight Jacket</h3>
+                        <p>Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
+                        <span>R$ 100,00</span>
+                        <button class="add-produto" id="add_1">Adicionar ao carrinho</button>
+                    </div>
+                </li>
+            </ul>
         </main>
-        <aside>
-            
+        <aside class="secao-carrinho">
+            <form class="pesquisa" action="">
+                <input class="campo-pesquisa" type="text" placeholder="Digite aqui sua pesquisa">
+                <button>Pesquisar</button>
+            </form>
+            <section class="itens-carrinho">
+                <div class="titulo-carrinho">
+                    <h2 >Carrinho de compras</h2>
+                </div>               
+                <ul class="lista-carrinho">
+                    <!--
+                        <div id="carrinho-vazio">                        
+                            <h3>Carrinho vazio</h3>
+                            <small>Adicione itens</small>
+                        </div>
+                    -->
+                    <li>
+                        <img src="../img/jaqueta.svg" alt="">
+                        <div>
+                            <h3>Lightweight Jacket</h3>
+                            <span>R$ 100,00</span>
+                            <button class="remove-produto" id="remove_1">Remover produto</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../img/jaqueta.svg" alt="">
+                        <div>
+                            <h3>Lightweight Jacket</h3>
+                            <span>R$ 100,00</span>
+                            <button class="remove-produto" id="remove_1">Remover produto</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../img/jaqueta.svg" alt="">
+                        <div>
+                            <h3>Lightweight Jacket</h3>
+                            <span>R$ 100,00</span>
+                            <button class="remove-produto" id="remove_1">Remover produto</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../img/jaqueta.svg" alt="">
+                        <div>
+                            <h3>Lightweight Jacket</h3>
+                            <span>R$ 100,00</span>
+                            <button class="remove-produto" id="remove_1">Remover produto</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../img/jaqueta.svg" alt="">
+                        <div>
+                            <h3>Lightweight Jacket</h3>
+                            <span>R$ 100,00</span>
+                            <button class="remove-produto" id="remove_1">Remover produto</button>
+                        </div>
+                    </li>                    
+                </ul>
+                <div class="fechamento-carrinho">
+                    <div class="quantidade">
+                        <span>Quantidade:</span>
+                        <small id="quantidade-itens">3</small>
+                    </div>
+                    <div class="total">
+                        <span>Total:</span>
+                        <small id="valor-total">R$ 200,00</small>
+                    </div>
+                </div>
+            </section>
         </aside>
     </div>
     <script src="./js/database.js"></script>
