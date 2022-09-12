@@ -54,7 +54,7 @@ const data = [
   {
     id: 6,
     img: "../img/moletom.svg",
-    nameItem: "Champion Packable Jacket",
+    nameItem: "Champion Jacket",
     description:
       "Proteja-se dos elementos com esta jaqueta embalável Champion. Esta jaqueta de poliést...",
     value: 100,
