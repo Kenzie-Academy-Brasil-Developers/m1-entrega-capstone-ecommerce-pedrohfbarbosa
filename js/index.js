@@ -91,9 +91,14 @@ function criarCards(item) {
     let cardProduto = document.createElement("li")
     cardProduto.classList.add("card-produto")
 
+    let divImg = document.createElement("div")
+    divImg.classList.add("div-img")    
+
     let imagemProduto = document.createElement("img")
     imagemProduto.src = item.img
     imagemProduto.alt = item.nameItem
+
+    divImg.appendChild(imagemProduto)
 
     let conteudoCard = document.createElement("div")
     conteudoCard.classList.add("conteudo-produto")
@@ -130,7 +135,7 @@ function criarCards(item) {
 
     conteudoCard.appendChild(botaoAdd)
 
-    cardProduto.appendChild(imagemProduto)
+    cardProduto.appendChild(divImg)
     cardProduto.appendChild(conteudoCard)
     return cardProduto
 }
