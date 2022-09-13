@@ -30,21 +30,19 @@ function criarCardCarrinho(item) {
     let quantidadeItensCarrinho = document.createElement("div")
     quantidadeItensCarrinho.classList.add("quantidade-itens")
 
-    
-    
     let quantidadeTotalProduto = document.createElement("span")
     quantidadeTotalProduto.innerHTML = `${totalNoCarrinho}`
 
     let removeQuantidade = document.createElement("button")
     removeQuantidade.innerText = "-"
-    removeQuantidade.addEventListener("click", function(event){
+    removeQuantidade.addEventListener("click", function (event) {
         quantidadeTotalProduto.innerHTML = ""
-        totalNoCarrinho--       
+        totalNoCarrinho--
         totalDoItem -= item.value
         quantidadeTotalProduto.innerHTML = `${totalNoCarrinho}`
         count--
         total -= item.value
-        if (totalNoCarrinho < 1){
+        if (totalNoCarrinho < 1) {
             event.composedPath()[3].remove()
         }
         carroVazio()
@@ -53,17 +51,15 @@ function criarCardCarrinho(item) {
 
     let addQuantidade = document.createElement("button")
     addQuantidade.innerText = "+"
-    addQuantidade.addEventListener("click", function(){
+    addQuantidade.addEventListener("click", function () {
         quantidadeTotalProduto.innerHTML = ""
-        totalNoCarrinho++        
+        totalNoCarrinho++
         totalDoItem += item.value
         quantidadeTotalProduto.innerHTML = `${totalNoCarrinho}`
         count++
         total += item.value
         carrinhoTotal()
     })
-
-    
 
     quantidadeItensCarrinho.appendChild(removeQuantidade)
     quantidadeItensCarrinho.appendChild(quantidadeTotalProduto)
@@ -74,7 +70,7 @@ function criarCardCarrinho(item) {
     botaoRemover.classList.add("remove-produto")
     botaoRemover.setAttribute("id", `remove_${item.id}`)
 
-    botaoRemover.addEventListener("click", function(event){        
+    botaoRemover.addEventListener("click", function (event) {
         count -= totalNoCarrinho
         total -= totalDoItem
         event.composedPath()[2].remove()
@@ -103,7 +99,7 @@ function criarCards(item) {
     conteudoCard.classList.add("conteudo-produto")
 
     conteudoCard.innerHTML =
-        `
+    `
         <small>${item.tag[0]}</small>
         <h3>${item.nameItem}</h3>
         <p>${item.description}</p>
@@ -119,7 +115,7 @@ function criarCards(item) {
             listaCarrinho.innerHTML = ""
         }
         let itemDentroCarrinho = document.querySelector(`#carrinho_${item.id}`)
-        if (itemDentroCarrinho){
+        if (itemDentroCarrinho) {
             return alert("O item já está no carrinho")
         }
 
@@ -130,10 +126,10 @@ function criarCards(item) {
         listaCarrinho.appendChild(cardCarrinho)
 
         carrinhoTotal()
-       
     })
 
     conteudoCard.appendChild(botaoAdd)
+
     cardProduto.appendChild(imagemProduto)
     cardProduto.appendChild(conteudoCard)
     return cardProduto
@@ -148,7 +144,6 @@ function listarCards(lista) {
     carroVazio()
 }
 listarCards(data)
-
 
 let campoPesquisa = document.querySelector(".campo-pesquisa")
 let botaoPesquisa = document.querySelector(".botao-pesquisa")
@@ -174,31 +169,29 @@ botaoPesquisa.addEventListener("click", function (event) {
     listarCards(arrayPesquisa)
 })
 
-function carroVazio(){
+function carroVazio() {
     if (count == 0) {
         listaCarrinho.innerHTML = ""
         let carrinhoVazio = document.createElement("div")
         carrinhoVazio.setAttribute("id", "carrinho-vazio")
         carrinhoVazio.innerHTML =
-    `
+        `
         <h3>Carrinho vazio</h3>
         <small>Adicione itens</small>
-    `
+        `
 
-        carrinhoVazio.inn
         listaCarrinho.appendChild(carrinhoVazio)
     }
-} 
+}
 
+function carrinhoTotal() {
+    if (count > 0) {
 
-
-function carrinhoTotal(){
-    if (count > 0){
         armazenaTotal.innerHTML = ""
-    
+
         let fechamentoCarrinho = document.createElement("div")
         fechamentoCarrinho.classList.add("fechamento-carrinho")
-    
+
         fechamentoCarrinho.innerHTML =
             `
         <div class="quantidade">
@@ -211,29 +204,28 @@ function carrinhoTotal(){
         </div>
         `
         armazenaTotal.appendChild(fechamentoCarrinho)
-    }else{
+    } else {
         armazenaTotal.innerHTML = ""
     }
-
 }
 
 let logo = document.querySelector(".logo")
-logo.addEventListener("click", function(){
+logo.addEventListener("click", function () {
     listarCards(data)
 })
 
 let listarTodos = document.querySelector("#listar-todos")
-listarTodos.addEventListener("click", function(event){
+listarTodos.addEventListener("click", function (event) {
     event.preventDefault()
     listarCards(data)
 })
 
-function buscarPalavraChave(palavraChave){
+function buscarPalavraChave(palavraChave) {
     let arrayChave = []
-    for (let i = 0; i < data.length; i++){        
-        let categorias = data[i].tag     
-        for (let j = 0; j < categorias.length; j++){
-            if (categorias[j].toLowerCase() == palavraChave.toLowerCase()){
+    for (let i = 0; i < data.length; i++) {
+        let categorias = data[i].tag
+        for (let j = 0; j < categorias.length; j++) {
+            if (categorias[j].toLowerCase() == palavraChave.toLowerCase()) {
                 arrayChave.push(data[i])
             }
         }
@@ -242,19 +234,19 @@ function buscarPalavraChave(palavraChave){
 }
 
 let listarAcessorios = document.querySelector("#listar-acessorios")
-listarAcessorios.addEventListener("click", function(event){
+listarAcessorios.addEventListener("click", function (event) {
     event.preventDefault()
     buscarPalavraChave("acessórios")
 })
 
 let listarCalcados = document.querySelector("#listar-calcados")
-listarCalcados.addEventListener("click", function(event){
+listarCalcados.addEventListener("click", function (event) {
     event.preventDefault()
     buscarPalavraChave("calçados")
 })
 
 let listarCamisetas = document.querySelector("#listar-camisetas")
-listarCamisetas.addEventListener("click", function(event){
+listarCamisetas.addEventListener("click", function (event) {
     event.preventDefault()
     buscarPalavraChave("camisetas")
 })
