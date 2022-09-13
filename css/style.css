@@ -213,7 +213,7 @@ body .conteudo-principal main {
 
 .lista-carrinho li {
     display: flex;
-    height: 75px;
+    height: 90px;
     gap: 15px;
     flex-shrink: 0;    
 }
@@ -223,23 +223,48 @@ body .conteudo-principal main {
     height: 100%;
     background-color: white;
 }
-.lista-carrinho li div {
+.lista-carrinho li .conteudo-item-carrinho {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
 }
 
-.lista-carrinho li div h3{
+.lista-carrinho li .conteudo-item-carrinho h3{
     font-size: 14px;
     font-weight: bold;
 }
 
-.lista-carrinho li div span {
+.lista-carrinho li .conteudo-item-carrinho span {
     font-size: 12px;
 }
 
-.lista-carrinho li div button{
+.lista-carrinho li .conteudo-item-carrinho .quantidade-itens {
+    display: flex;    
+    gap: 10px;
+}
+
+.lista-carrinho li .conteudo-item-carrinho .quantidade-itens button {
+    border-radius: 4px;
+    background-color: #F5F5F5;
+    width: fit-content;
+    border: #37268C 1px solid;
+    align-self: center;
+}
+
+.lista-carrinho li .conteudo-item-carrinho .quantidade-itens button:hover {
+    text-decoration: none;
+    background-color: #37268C;
+    color: white;
+}
+
+.lista-carrinho li .conteudo-item-carrinho .quantidade-itens span {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.lista-carrinho li .conteudo-item-carrinho button{
     border: none;
     width: fit-content;
     background-color: #F5F5F5;

@@ -9,6 +9,9 @@ let count = 0
 let total = 0
 
 function criarCardCarrinho(item) {
+    let totalNoCarrinho = 1
+    let totalDoItem = item.value
+
     let cardCarrinho = document.createElement("li")
     cardCarrinho.setAttribute("id", `carrinho_${item.id}`)
 
@@ -17,24 +20,69 @@ function criarCardCarrinho(item) {
     imagemCarrinho.alt = item.nameItem
 
     let conteudoItemCarrinho = document.createElement("div")
+    conteudoItemCarrinho.classList.add("conteudo-item-carrinho")
     conteudoItemCarrinho.innerHTML =
         `
         <h3>${item.nameItem}</h3>
         <span>R$ ${(item.value).toFixed(2)}</span>
     `
+
+    let quantidadeItensCarrinho = document.createElement("div")
+    quantidadeItensCarrinho.classList.add("quantidade-itens")
+
+    
+    
+    let quantidadeTotalProduto = document.createElement("span")
+    quantidadeTotalProduto.innerHTML = `${totalNoCarrinho}`
+
+    let removeQuantidade = document.createElement("button")
+    removeQuantidade.innerText = "-"
+    removeQuantidade.addEventListener("click", function(event){
+        quantidadeTotalProduto.innerHTML = ""
+        totalNoCarrinho--       
+        totalDoItem -= item.value
+        quantidadeTotalProduto.innerHTML = `${totalNoCarrinho}`
+        count--
+        total -= item.value
+        if (totalNoCarrinho < 1){
+            event.composedPath()[3].remove()
+        }
+        carroVazio()
+        carrinhoTotal()
+    })
+
+    let addQuantidade = document.createElement("button")
+    addQuantidade.innerText = "+"
+    addQuantidade.addEventListener("click", function(){
+        quantidadeTotalProduto.innerHTML = ""
+        totalNoCarrinho++        
+        totalDoItem += item.value
+        quantidadeTotalProduto.innerHTML = `${totalNoCarrinho}`
+        count++
+        total += item.value
+        carrinhoTotal()
+    })
+
+    
+
+    quantidadeItensCarrinho.appendChild(removeQuantidade)
+    quantidadeItensCarrinho.appendChild(quantidadeTotalProduto)
+    quantidadeItensCarrinho.appendChild(addQuantidade)
+
     let botaoRemover = document.createElement("button")
     botaoRemover.innerText = "Remover produto"
     botaoRemover.classList.add("remove-produto")
     botaoRemover.setAttribute("id", `remove_${item.id}`)
 
-    botaoRemover.addEventListener("click", function(event){
-        count--
-        total -= item.value
+    botaoRemover.addEventListener("click", function(event){        
+        count -= totalNoCarrinho
+        total -= totalDoItem
         event.composedPath()[2].remove()
         carroVazio()
         carrinhoTotal()
     })
 
+    conteudoItemCarrinho.appendChild(quantidadeItensCarrinho)
     conteudoItemCarrinho.appendChild(botaoRemover)
 
     cardCarrinho.appendChild(imagemCarrinho)
@@ -141,6 +189,8 @@ function carroVazio(){
         listaCarrinho.appendChild(carrinhoVazio)
     }
 } 
+
+
 
 function carrinhoTotal(){
     if (count > 0){
