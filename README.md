@@ -1,3 +1,7 @@
+Todos os nomes, marcas, produtos, itens deste projeto foram utilizados para fins acadêmicos. Em nenhum momento este projeto será utilizado para fins comerciais nem para ganho fincanceiro de seu criador.
+
+All names, brands, products, items in this project were used for academic purposes. At no time will this project be used for commercial purposes or for the financial gain of its creator.
+
 Projeto - Projeto Front End.
 ============================
 
