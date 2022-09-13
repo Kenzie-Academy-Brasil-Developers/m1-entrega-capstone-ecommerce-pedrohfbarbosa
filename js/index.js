@@ -205,7 +205,7 @@ function carrinhoTotal() {
         </div>
         <div class="total">
             <span>Total:</span>
-            <small id="valor-total">R$ ${total}</small>
+            <small id="valor-total">R$ ${total.toFixed(2)}</small>
         </div>
         `
         armazenaTotal.appendChild(fechamentoCarrinho)

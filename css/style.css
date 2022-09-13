@@ -3,7 +3,7 @@
 body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 400;    
 }
 
 body header {
@@ -70,6 +70,8 @@ body .conteudo-principal main {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    max-height: 810px;
+    overflow-y: auto;
 }
 
 .card-produto {
@@ -82,6 +84,7 @@ body .conteudo-principal main {
     border-radius: 10px;
     overflow: hidden;
     background-color: #F5F5F5;
+    flex-shrink: 0;
 }
 
 .card-produto:hover {
