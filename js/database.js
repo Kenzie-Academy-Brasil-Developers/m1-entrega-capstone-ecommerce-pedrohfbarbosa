@@ -3,7 +3,7 @@
 const data = [
   {
     id: 1,
-    img: "../img_capstone/bucs_jersey.jpg",
+    img: "./img_capstone/bucs_jersey.jpg",
     nameItem: "Buccaneers Jersey",
     description:
       "O novo modelo da camisa do seu time chegou, confira agora mesmo...",
@@ -13,7 +13,7 @@ const data = [
   },
   {
     id: 2,
-    img: "../img_capstone/chiefs_jersey.jpg",
+    img: "./img_capstone/chiefs_jersey.jpg",
     nameItem: "Chiefs Jersey",
     description:
       "O novo modelo da camisa do seu time chegou, confira agora mesmo...",
@@ -23,7 +23,7 @@ const data = [
   },
   {
     id: 3,
-    img: "../img_capstone/packers_jersey.jpg",
+    img: "./img_capstone/packers_jersey.jpg",
     nameItem: "Packers Jersey",
     description:
       "O novo modelo da camisa do seu time chegou, confira agora mesmo...",
@@ -33,7 +33,7 @@ const data = [
   },
   {
     id: 4,
-    img: "../img_capstone/ball_nfl.jpg",
+    img: "./img_capstone/ball_nfl.jpg",
     nameItem: "Bola Futebol Americano",
     description:
       "Confira agora mesmo o novo modelo de bola da NFL, apenas aqui no...",
@@ -43,7 +43,7 @@ const data = [
   },
   {
     id: 5,
-    img: "../img_capstone/bola_basquete.webp",
+    img: "./img_capstone/bola_basquete.webp",
     nameItem: "Bola de Basquete",
     description:
       "Confira agora mesmo o novo modelo de bola da NBA, apenas aqui no...",
@@ -53,7 +53,7 @@ const data = [
   },
   {
     id: 6,
-    img: "../img_capstone/bola_copa.webp",
+    img: "./img_capstone/bola_copa.webp",
     nameItem: "Bola Futebol",
     description:
       "Confira agora mesmo o novo modelo de bola da Copa do Mundo, ...",
@@ -63,7 +63,7 @@ const data = [
   },
   {
     id: 7,
-    img: "../img_capstone/chinelo_adidas.webp",
+    img: "./img_capstone/chinelo_adidas.webp",
     nameItem: "Sandália Esportiva",
     description:
       "Confira agora mesmo o novo modelo de sandália esportiva...",
@@ -73,7 +73,7 @@ const data = [
   },
   {
     id: 8,
-    img: "../img_capstone/chuteira_futebol.webp",
+    img: "./img_capstone/chuteira_futebol.webp",
     nameItem: "Chuteira futebol",
     description:
       "Confira agora mesmo o novo modelo de chuteira de futebol...",
@@ -83,7 +83,7 @@ const data = [
   },
   {
     id: 9,
-    img: "../img_capstone/tenis_basquete.webp",
+    img: "./img_capstone/tenis_basquete.webp",
     nameItem: "Tênis de basquete",
     description:
       "Confira agora mesmo o novo modelo de tênis de basquete...",
@@ -93,7 +93,7 @@ const data = [
   },
   {
     id: 10,
-    img: "../img_capstone/raquete_tenis.webp",
+    img: "./img_capstone/raquete_tenis.webp",
     nameItem: "Raquete de tênis",
     description:
       "Confira agora mesmo o novo modelo de raquete de tênis...",
@@ -103,7 +103,7 @@ const data = [
   },
   {
     id: 11,
-    img: "../img_capstone/raquete_tenis2.webp",
+    img: "./img_capstone/raquete_tenis2.webp",
     nameItem: "Raquete Lançamento",
     description:
       "Confira agora mesmo o novo modelo de raquete de tênis profi...",
@@ -113,7 +113,7 @@ const data = [
   },
   {
     id: 12,
-    img: "../img_capstone/bola_tenis.webp",
+    img: "./img_capstone/bola_tenis.webp",
     nameItem: "Bola de tênis",
     description:
       "Confira agora mesmo o novo modelo bola de tênis...",
