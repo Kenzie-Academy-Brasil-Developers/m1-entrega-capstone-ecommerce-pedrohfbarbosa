@@ -166,7 +166,10 @@ body .conteudo-principal main {
 
 .secao-carrinho form input {
     background-color: #F5F5F5;
-    border: none;
+    border: none;    
+    resize: none;
+    outline: none;
+    border: 1px solid #e95b03;
     padding-left: 15px;
     width: 60%;
 }
